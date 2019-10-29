@@ -45,7 +45,7 @@ public class BankTest {
 		assertEquals(0.0f, account.getBalance(), 0.01);
 	}
 
-	// assuming we have to add only current account balance
+	// assuming we have to add only current account balance condition 1
 	@Test
 	public void getSumOfCurrentHoldingsTest() {
 		Account account = new Account("004", "Current", 100.0f);
@@ -59,6 +59,7 @@ public class BankTest {
 		assertEquals(500.0f, bank.getSumOfCurrentHoldings(), 0.01);
 	}
 
+	//condition 3 & 4
 	// checking account moe thamn $100 withdrawl test
 	// please check logger or console message to test this case
 
@@ -74,6 +75,7 @@ public class BankTest {
 		// assertEquals(500.0f, bank.getSumOfCurrentHoldings(), 0.01);
 	}
 
+	//condition 2
 	@Test
 	public void checkingProfitOrLossTest() {
 		Account account = new Account("004", "Checking", 100.0f, 12);
@@ -82,7 +84,6 @@ public class BankTest {
 		bank.addAccount(account2);
 		bank.getProfitOrLoss();
         assertTrue(true);
-		//assertEquals("Profit", bank.getProfitOrLoss());
 	}
 
 }
